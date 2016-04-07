@@ -3,12 +3,18 @@ class Stack
     @store = Array.new
   end
   
-  def pop
-  end
-  
   def push(element)
   end
-  
+ 
+  def pop
+  end
+
+  def top
+  end
+ 
   def size
+  end
+
+  def empty?
   end
 end

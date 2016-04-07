@@ -2,12 +2,18 @@ class Queue
   def initialize
   end
   
-  def dequeue
-  end
-  
   def enqueue(element)
   end
-  
+ 
+  def dequeue
+  end
+
+  def front
+  end
+ 
   def size
+  end
+
+  def empty?
   end
 end
