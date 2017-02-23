@@ -67,4 +67,7 @@ describe "Test Stack Implementation" do
     s.top.must_equal(22)
   end
 
+  # Challege Tests you could write yourself:
+  # it "raises an exception if you try to pop from an empty stack" do
+  # it "raises an exception if you try to call top on an empty stack" do
 end
