@@ -5,14 +5,12 @@ require_relative '../lib/Stack'
 describe "Test Stack Implementation" do
   it "creates a Stack" do
     s = Stack.new
-    puts "A stack has been created and currently contains #{s}"
     s.class.must_equal(Stack)
   end
 
   it "pushes something onto a empty Stack" do
     s = Stack.new
     s.push(10)
-    puts "Stack currently contains #{s}"
     s.to_s.must_equal("[10]")
   end
 
@@ -21,7 +19,52 @@ describe "Test Stack Implementation" do
     s.push(10)
     s.push(20)
     s.push(30)
-    puts "Stack currently contains #{s}"
     s.to_s.must_equal("[10, 20, 30]")
   end
+
+  it "starts the size of a Stack at 0" do
+    s = Stack.new
+    s.size.must_equal(0)
+    s.empty?.must_equal(true)
+  end
+
+  it "removes something from the stack" do
+    s = Stack.new
+    s.push(5)
+    s.pop
+    s.size.must_equal(0)
+    s.empty?.must_equal(true)
+  end
+
+  it "removes the right something (LIFO)" do
+    s = Stack.new
+    s.push(5)
+    s.push(3)
+    s.push(7)
+    s.pop
+    s.size.must_equal(2)
+    s.to_s.must_equal("[5, 3]")
+  end
+
+  it "properly adjusts the size with pushing and poping" do
+    s = Stack.new
+    s.empty?.must_equal(true)
+    s.push(-1)
+    s.push(-60)
+    s.size.must_equal(2)
+    s.empty?.must_equal(false)
+    s.pop
+    s.size.must_equal(1)
+    s.pop
+    s.size.must_equal(0)
+    s.empty?.must_equal(true)
+  end
+
+  it "returns the top element on the stack" do
+    s = Stack.new
+    s.push(40)
+    s.push(22)
+    s.top.must_equal(22)
+  end
+
 end
