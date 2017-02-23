@@ -3,7 +3,7 @@ In this project,
   1. Together, we will write an implementation for a stack.
   2. Together, we will test our implementation for a stack.
   3. With a partner, you will write and test an implementation for a queue.
-  4. Together, we will pseudocode how to tackle the job-simulation problem identified below.
+  4. Together, we will think about how you might tackle the job-simulation problem identified below.
     - Questions to think about:
       + What should be the data type of `workers`?
       + What should be the data type of `waiting`?
@@ -17,10 +17,10 @@ In this project,
 A company has a limited number of open positions (`jobs_available`) with more people wanting jobs (`job_seekers`) than the number of available positions. The company decides that they will allow people to work in three-month cycles. And at the end of each cycle, they will fire some people and hire others.
 
 To begin this process:
-- All people wanting jobs will be added to a `waiting` as `Worker #1`, `Worker #2`, `Worker #3`, etc.
-- Then all open positions will be filled by moving people from the `waiting` to `workers` in the order they were added to the waitlist
+- All people wanting jobs will be added to a `waiting` list as `Worker #1`, `Worker #2`, `Worker #3`, etc.
+- Then all open positions will be filled by moving people from `waiting` to `workers`, in the order they were added to the waitlist
 
-At the end of the three-month cycle, the manager will roll a dice to determine the number of people who will lose their jobs. The company will use the policy of last-hired-first-fired.  For example, if the dice roll is 3, the last 3 people hired will lose their jobs to the first 3 people on the waiting list. People losing their jobs will be placed on the back of the waiting list in the order that they are fired. This process will continue for every cycle.
+At the end of the three-month cycle, the managers will roll a die to determine the number of people who will lose their jobs. The company will use the policy of last-hired-first-fired. So, for example, if the die roll is 3, the last 3 people hired will lose their jobs to the first 3 people on the waiting list. People losing their jobs will be placed on the back of the waiting list in the order that they are fired. This process will continue for every cycle.
 
 During one cycle:
 - Roll a die (`roll`)
