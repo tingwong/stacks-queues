@@ -9,12 +9,14 @@ describe "Test Stack Implementation" do
   end
 
   it "pushes something onto a empty Stack" do
+    # skip
     s = Stack.new
     s.push(10)
     s.to_s.must_equal "[10]"
   end
 
   it "pushes multiple somethings onto a Stack" do
+    # skip
     s = Stack.new
     s.push(10)
     s.push(20)
@@ -23,12 +25,14 @@ describe "Test Stack Implementation" do
   end
 
   it "starts the size of a Stack at 0" do
+    # skip
     s = Stack.new
     s.size.must_equal 0
     s.empty?.must_equal true
   end
 
   it "removes something from the stack" do
+    # skip
     s = Stack.new
     s.push(5)
     s.pop
@@ -37,6 +41,7 @@ describe "Test Stack Implementation" do
   end
 
   it "removes the right something (LIFO)" do
+    # skip
     s = Stack.new
     s.push(5)
     s.push(3)
@@ -47,6 +52,7 @@ describe "Test Stack Implementation" do
   end
 
   it "properly adjusts the size with pushing and poping" do
+    # skip
     s = Stack.new
     s.empty?.must_equal true
     s.push(-1)
@@ -61,6 +67,7 @@ describe "Test Stack Implementation" do
   end
 
   it "returns the top element on the stack" do
+    # skip
     s = Stack.new
     s.push(40)
     s.push(22)
