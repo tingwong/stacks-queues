@@ -36,7 +36,8 @@ describe "Test Queue Implementation" do
     skip
     q = Queue.new
     q.enqueue(5)
-    q.dequeue
+    removed = q.dequeue
+    removed.must_equal 5
     q.size.must_equal 0
     q.empty?.must_equal true
   end
@@ -47,7 +48,8 @@ describe "Test Queue Implementation" do
     q.enqueue(5)
     q.enqueue(3)
     q.enqueue(7)
-    q.dequeue
+    removed = q.dequeue
+    removed.must_equal 5
     q.size.must_equal 2
     q.to_s.must_equal "[3, 7]"
   end

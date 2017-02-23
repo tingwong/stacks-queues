@@ -36,7 +36,8 @@ describe "Test Stack Implementation" do
     skip
     s = Stack.new
     s.push(5)
-    s.pop
+    removed = s.pop
+    removed.must_equal 5
     s.size.must_equal 0
     s.empty?.must_equal true
   end
@@ -47,7 +48,8 @@ describe "Test Stack Implementation" do
     s.push(5)
     s.push(3)
     s.push(7)
-    s.pop
+    removed = s.pop
+    removed.must_equal 7
     s.size.must_equal 2
     s.to_s.must_equal "[5, 3]"
   end
