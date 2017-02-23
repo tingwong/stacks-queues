@@ -68,7 +68,7 @@ describe "Test Stack Implementation" do
   end
 
   # Challege Tests you could write yourself:
-  # it "doesn't alter the size when you call top"
+  # it "doesn't alter the size when you call top" do
   # it "raises an exception if you try to pop from an empty stack" do
   # it "raises an exception if you try to call top on an empty stack" do
 end
