@@ -5,13 +5,13 @@ require_relative '../lib/Stack'
 describe "Test Stack Implementation" do
   it "creates a Stack" do
     s = Stack.new
-    s.class.must_equal(Stack)
+    s.class.must_equal Stack
   end
 
   it "pushes something onto a empty Stack" do
     s = Stack.new
     s.push(10)
-    s.to_s.must_equal("[10]")
+    s.to_s.must_equal "[10]"
   end
 
   it "pushes multiple somethings onto a Stack" do
@@ -19,21 +19,21 @@ describe "Test Stack Implementation" do
     s.push(10)
     s.push(20)
     s.push(30)
-    s.to_s.must_equal("[10, 20, 30]")
+    s.to_s.must_equal "[10, 20, 30]"
   end
 
   it "starts the size of a Stack at 0" do
     s = Stack.new
-    s.size.must_equal(0)
-    s.empty?.must_equal(true)
+    s.size.must_equal 0
+    s.empty?.must_equal true
   end
 
   it "removes something from the stack" do
     s = Stack.new
     s.push(5)
     s.pop
-    s.size.must_equal(0)
-    s.empty?.must_equal(true)
+    s.size.must_equal 0
+    s.empty?.must_equal true
   end
 
   it "removes the right something (LIFO)" do
@@ -42,32 +42,33 @@ describe "Test Stack Implementation" do
     s.push(3)
     s.push(7)
     s.pop
-    s.size.must_equal(2)
-    s.to_s.must_equal("[5, 3]")
+    s.size.must_equal 2
+    s.to_s.must_equal "[5, 3]"
   end
 
   it "properly adjusts the size with pushing and poping" do
     s = Stack.new
-    s.empty?.must_equal(true)
+    s.empty?.must_equal true
     s.push(-1)
     s.push(-60)
-    s.size.must_equal(2)
-    s.empty?.must_equal(false)
+    s.size.must_equal 2
+    s.empty?.must_equal false
     s.pop
-    s.size.must_equal(1)
+    s.size.must_equal 1
     s.pop
-    s.size.must_equal(0)
-    s.empty?.must_equal(true)
+    s.size.must_equal 0
+    s.empty?.must_equal true
   end
 
   it "returns the top element on the stack" do
     s = Stack.new
     s.push(40)
     s.push(22)
-    s.top.must_equal(22)
+    s.top.must_equal 22
   end
 
   # Challege Tests you could write yourself:
+  # it "doesn't alter the size when you call top"
   # it "raises an exception if you try to pop from an empty stack" do
   # it "raises an exception if you try to call top on an empty stack" do
 end
